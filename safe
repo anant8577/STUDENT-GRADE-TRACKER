@@ -1,0 +1,15 @@
+public static void main(String[] args) {
+        ArrayList<Integer> grades = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter student grades (type -1 to finish):");
+        while (true) {
+            System.out.print("Enter grade: ");
+            int grade = scanner.nextInt();
+
+            if (grade == -1) {
+                break;
+            } else if (grade >= 0 && grade <= 100) {
+                grades.add(grade);
+            } else {
+                System.out.println("Please enter a valid grade between 0 and 100.");
